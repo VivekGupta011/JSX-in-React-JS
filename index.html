@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+     <p id="txt">this is testing of event </p>
+    <button onclick="Testing1()">click me</button>
+
+    <button onclick="Testing2()">click me!</button>
+
+    <button id="Testing3">click me!</button>
+
+    <script>
+        function Testing1(){
+            let ParagraphText=document.getElementById("txt");
+            ParagraphText.innerHTML="this is onclick event";
+            ParagraphText.style.backgroundColor="red";
+
+        }
+
+        function Testing2(){
+            let ParagraphText=document.getElementById("txt");
+            ParagraphText.style.fontSize="40px";
+            ParagraphText.style.transition="all 2s";
+            let data= ParagraphText.innerHTML.toUpperCase();
+            ParagraphText.innerHTML=data;
+
+        }
+        
+        function Testingg(){
+        let ParagraphText=document.getElementById("txt");
+        ParagraphText.style.textAlign="center";
+        ParagraphText.style.backgroundColor="green";
+
+
+        }
+
+        // addevent listner
+        let btn=document.getElementById("Testing3");
+        btn.addEventListener('click',Testingg());
+
+    </script>
+</body>
+</html>
